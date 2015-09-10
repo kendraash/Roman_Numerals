@@ -1,9 +1,22 @@
 var romanNumeral = function(number) {
   var output = [];
-  if(number > 89 && number < 999) {
+  if(number >= 900 && number < 4000) {
+    if (number > 999) {
+      var count = Math.floor(number/1000);
+      for(var i = 0; i < count; i++) {
+        output.push("M");
+      }
+      number = number%1000;
+    }
+    if(number > 899 && number <= 999) {
+      output.push("C", "M");
+      number = number - 900;
+    }
+  }
+  if(number > 89 && number < 900) {
     if(number >= 500) {
-      output.push("D")
-      number = number - 500
+      output.push("D");
+      number = number - 500;
     }
     if (number > 99) {
       var count = Math.floor(number/100);
@@ -16,12 +29,11 @@ var romanNumeral = function(number) {
       output.push("X", "C");
       number = number - 90;
     }
-
   }
   if (number >= 9 && number <= 89) {
     if(number >= 50) {
-      output.push("L")
-      number = number - 50
+      output.push("L");
+      number = number - 50;
     }
     if (number > 9) {
       var count = Math.floor(number/10);
@@ -50,6 +62,5 @@ var romanNumeral = function(number) {
       output.push("I");
     }
   }
-
   return output;
 };

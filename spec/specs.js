@@ -41,4 +41,10 @@ describe("romanNumeral", function() {
   it("returns the correct roman numeral for 887", function() {
     expect(romanNumeral(887)).to.eql(['D','C','C','C','L','X','X','X','V','I','I']);
   });
+  it("returns the correct roman numeral for 997", function() {
+    expect(romanNumeral(997)).to.eql(['C','M','X','C','V','I','I']);
+  });
+  it("returns the correct roman numeral for 3999", function() {
+    expect(romanNumeral(3999)).to.eql(['M','M','M','C','M','X','C','I','X']);
+  });
 });
