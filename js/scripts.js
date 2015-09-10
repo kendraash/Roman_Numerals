@@ -93,18 +93,20 @@ $(document).ready(function() {
     var allRoman = allRomanNumerals(number);
     var romAndNum;
     var arrayOfRomAndNum = [];
+    // console.log(allRoman);
+    for(var i=0; i < allRoman.length; i+=2) {
+      romAndNum = ('<li>'+"Number: " + allRoman[i].toString() + " |" + " Roman: " + allRoman[i + 1].toString().replace(/,/g, '')+'</li>');
+      // debugger;
 
-    // for (var i=0; i<allRoman.length(); i++) {
-    //   romAndNum = ("Number " + allRoman[i].toString() + " Roman: " + allRoman[i + 1].toString());
-    //   document.write(romAndNum);
-    //   arrayOfRomAndNum.push(romAndNum);
-    // }
+      arrayOfRomAndNum.push(romAndNum);
+    }
+    // console.log(arrayOfRomAndNum);
     // arrayOfRomAndNum = arrayOfRomAndNum.toString();
 
     $(".number").text(number);
     $(".output").text(output);
 
-    // $(".allRoman").text(arrayOfRomAndNum);
+    $(".allRoman").html(arrayOfRomAndNum);
 
     $("#result").show();
     event.preventDefault();

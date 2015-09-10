@@ -7,6 +7,7 @@
 ## Description
 
 _Users can enter a numeric value and the returned value will be in roman numerals._
+_Users will also see a list of all roman numerals up to the number entered._
 
 
 ## Technology Used
