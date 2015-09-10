@@ -64,3 +64,17 @@ var romanNumeral = function(number) {
   }
   return output;
 };
+
+
+$(document).ready(function() {
+  $("form#roman-numeral").submit(function(event) {
+    var number = parseInt($("input#number").val());
+    var output = romanNumeral(number);
+    output = output.toString().replace(/,/g, '');
+    
+    $(".number").text(number);
+    $(".output").text(output);
+    $("#result").show();
+    event.preventDefault();
+  });
+});
