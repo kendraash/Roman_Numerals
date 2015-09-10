@@ -26,4 +26,13 @@ describe("romanNumeral", function() {
   it("returns the correct roman numeral for 39", function() {
     expect(romanNumeral(39)).to.eql(['X',"X","X","I","X"]);
   });
+  it("returns the correct roman numeral for 50", function() {
+    expect(romanNumeral(50)).to.eql(['L']);
+  });
+  it("returns the correct roman numeral for 63", function() {
+    expect(romanNumeral(63)).to.eql(['L','X','I','I','I']);
+  });
+  it("returns the correct roman numeral for 89", function() {
+    expect(romanNumeral(89)).to.eql(['L','X','X','X','I','X']);
+  });
 });

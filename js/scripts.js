@@ -1,6 +1,10 @@
 var romanNumeral = function(number) {
   var output = [];
-  if (number >= 9 && number <= 39) {
+  if (number >= 9 && number <= 89) {
+    if(number >= 50) {
+      output.push("L")
+      number = number - 50
+    }
     if (number > 9) {
       var count = Math.floor(number/10);
       for(var i = 0; i < count; i++) {
