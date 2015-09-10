@@ -35,4 +35,10 @@ describe("romanNumeral", function() {
   it("returns the correct roman numeral for 89", function() {
     expect(romanNumeral(89)).to.eql(['L','X','X','X','I','X']);
   });
+  it("returns the correct roman numeral for 99", function() {
+    expect(romanNumeral(99)).to.eql(['X','C','I','X']);
+  });
+  it("returns the correct roman numeral for 887", function() {
+    expect(romanNumeral(887)).to.eql(['D','C','C','C','L','X','X','X','V','I','I']);
+  });
 });

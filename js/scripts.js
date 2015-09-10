@@ -1,5 +1,23 @@
 var romanNumeral = function(number) {
   var output = [];
+  if(number > 89 && number < 999) {
+    if(number >= 500) {
+      output.push("D")
+      number = number - 500
+    }
+    if (number > 99) {
+      var count = Math.floor(number/100);
+      for(var i = 0; i < count; i++) {
+       output.push("C");
+      }
+      number = number%100;
+    }
+    if(number > 89 && number <= 99) {
+      output.push("X", "C");
+      number = number - 90;
+    }
+
+  }
   if (number >= 9 && number <= 89) {
     if(number >= 50) {
       output.push("L")
