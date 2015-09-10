@@ -1,9 +1,12 @@
 var romanNumeral = function(number) {
   var output = [];
-  if (number >= 9 && number <= 19) {
+  if (number >= 9 && number <= 39) {
     if (number > 9) {
+      var count = Math.floor(number/10);
+      for(var i = 0; i < count; i++) {
        output.push("X");
-       number = number%10;
+      }
+      number = number%10;
     }
     if (number === 9) {
        output.push("I", "X");
@@ -16,8 +19,8 @@ var romanNumeral = function(number) {
       number = number - number;
     }
     else {
-    output.push("V");
-    number = number%5;
+      output.push("V");
+      number = number%5;
     }
   }
   if (number < 4) {

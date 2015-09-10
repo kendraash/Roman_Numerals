@@ -20,4 +20,10 @@ describe("romanNumeral", function() {
   it("returns the correct roman numeral for 19", function() {
     expect(romanNumeral(19)).to.eql(['X',"I","X"]);
   });
+  it("returns the correct roman numeral for 24", function() {
+    expect(romanNumeral(24)).to.eql(['X',"X","I", "V"]);
+  });
+  it("returns the correct roman numeral for 39", function() {
+    expect(romanNumeral(39)).to.eql(['X',"X","X","I","X"]);
+  });
 });
