@@ -18,6 +18,11 @@ var romanNumeral = function(number) {
       output.push("D");
       number = number - 500;
     }
+    //ADD for 400
+    if(number > 399 && number <= 499) {
+      output.push("C", "D");
+      number = number - 400;
+    }
     if (number > 99) {
       var count = Math.floor(number/100);
       for(var i = 0; i < count; i++) {
@@ -34,6 +39,11 @@ var romanNumeral = function(number) {
     if(number >= 50) {
       output.push("L");
       number = number - 50;
+    }
+    // Add for 40
+    if(number > 39 && number <= 49) {
+      output.push("X", "L");
+      number = number - 40;
     }
     if (number > 9) {
       var count = Math.floor(number/10);
@@ -71,7 +81,7 @@ $(document).ready(function() {
     var number = parseInt($("input#number").val());
     var output = romanNumeral(number);
     output = output.toString().replace(/,/g, '');
-    
+
     $(".number").text(number);
     $(".output").text(output);
     $("#result").show();

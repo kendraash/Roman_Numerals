@@ -47,4 +47,7 @@ describe("romanNumeral", function() {
   it("returns the correct roman numeral for 3999", function() {
     expect(romanNumeral(3999)).to.eql(['M','M','M','C','M','X','C','I','X']);
   });
+  it("returns the correct roman numeral for 400", function() {
+    expect(romanNumeral(400)).to.eql(['C','D']);
+  });
 });
