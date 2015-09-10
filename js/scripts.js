@@ -94,17 +94,17 @@ $(document).ready(function() {
     var romAndNum;
     var arrayOfRomAndNum = [];
 
-    for (var i=0; i<allRoman.length(); i++) {
-      romAndNum = ("Number " + allRoman[i].toString() + " Roman: " + allRoman[i + 1].toString());
-      document.write(romAndNum);
-      arrayOfRomAndNum.push(romAndNum);
-    }
-    arrayOfRomAndNum = arrayOfRomAndNum.toString();
+    // for (var i=0; i<allRoman.length(); i++) {
+    //   romAndNum = ("Number " + allRoman[i].toString() + " Roman: " + allRoman[i + 1].toString());
+    //   document.write(romAndNum);
+    //   arrayOfRomAndNum.push(romAndNum);
+    // }
+    // arrayOfRomAndNum = arrayOfRomAndNum.toString();
 
     $(".number").text(number);
     $(".output").text(output);
 
-    $(".allRoman").text(arrayOfRomAndNum);
+    // $(".allRoman").text(arrayOfRomAndNum);
 
     $("#result").show();
     event.preventDefault();

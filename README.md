@@ -1,14 +1,12 @@
-# _App Name_
+# _Roman Numerals_
 
-##### This app allows you to .....
+##### This app allows you to translate numbers into roman numerals.
 
-#### By _**Yelena Nedelko**_
+#### By _**Kendra Ash and Yelena Nedelko**_
 
 ## Description
 
-_Users can:_
-
-* _....._
+_Users can enter a numeric value and the returned value will be in roman numerals._
 
 
 ## Technology Used
@@ -18,7 +16,7 @@ _Users can:_
 
 ### Legal
 
-Copyright (c) 2015 **_Yelena Nedelko_**
+Copyright (c) 2015 **_Kendra Ash and Yelena Nedelko_**
 
 This software is licensed under the MIT license.
 
