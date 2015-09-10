@@ -75,6 +75,14 @@ var romanNumeral = function(number) {
   return output;
 };
 
+var allRomanNumerals = function(number) {
+  var result = []
+  for(var i = 1; i < number; i++) {
+    romanNumber = romanNumeral(i).toString();
+    result.push(i, romanNumber);
+  }
+  return result;
+}
 
 $(document).ready(function() {
   $("form#roman-numeral").submit(function(event) {
@@ -82,8 +90,22 @@ $(document).ready(function() {
     var output = romanNumeral(number);
     output = output.toString().replace(/,/g, '');
 
+    var allRoman = allRomanNumerals(number);
+    var romAndNum;
+    var arrayOfRomAndNum = [];
+
+    for (var i=0; i<allRoman.length(); i++) {
+      romAndNum = ("Number " + allRoman[i].toString() + " Roman: " + allRoman[i + 1].toString());
+      document.write(romAndNum);
+      arrayOfRomAndNum.push(romAndNum);
+    }
+    arrayOfRomAndNum = arrayOfRomAndNum.toString();
+
     $(".number").text(number);
     $(".output").text(output);
+
+    $(".allRoman").text(arrayOfRomAndNum);
+
     $("#result").show();
     event.preventDefault();
   });
